@@ -25,6 +25,16 @@ console.log(result3);   // true
 
 function mySome(array, cb) {
     // Your code here
+
+    let bool = false;
+
+    for (let i = 0; i < array.length; i++) {
+        if (cb(array[i], i)) {
+            bool = true;
+        }
+    }
+
+    return bool;
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
